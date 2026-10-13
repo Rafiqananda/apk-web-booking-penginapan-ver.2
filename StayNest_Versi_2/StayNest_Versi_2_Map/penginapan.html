@@ -1,0 +1,100 @@
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Penginapan - StayNest
+        </title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="index.html">
+                Stay<span>Nest</span>
+            </a>
+            <nav>
+                <a href="index.html">
+                    Home
+                </a>
+                <a class="active" href="penginapan.html">
+                    Penginapan
+                </a>
+                <a href="index.html#tentang">
+                    Tentang
+                </a>
+                <a href="index.html#kontak">
+                    Kontak
+                </a>
+            </nav>
+        </header>
+        <main>
+            <section class="page">
+                <p class="eyebrow">
+                    STAYNEST
+                </p>
+                <h1>
+                    Cari Penginapan di Manado dan Sekitarnya
+                </h1>
+                <p>
+                    Gunakan peta untuk melihat area penginapan, kemudian pilih penginapan yang ingin kamu lihat.
+                </p>
+            </section>
+            <section class="mapwrap">
+                <div class="maphead">
+                    <div>
+                        <h2>
+                            🗺️ Peta Penginapan
+                        </h2>
+                        <p>
+                            Peta menggunakan Google Maps dan dapat dibuka langsung melalui Google Chrome.
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn" onclick="showManadoMap()">
+                            🗺️ Manado
+                        </button>
+                        <button class="btn outline" onclick="findMyLocation()">
+                            📍 Lokasi Saya
+                        </button>
+                    </div>
+                </div>
+                <div class="google-map-box">
+                    <iframe id="googleMap" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=hotel%20di%20Manado%20Sulawesi%20Utara&amp;output=embed" title="Google Maps Penginapan Manado">
+                    </iframe>
+                </div>
+                <small>
+                    Klik kartu penginapan untuk melihat detail. Kamu juga bisa membuka lokasi penginapan langsung di Google Maps.
+                </small>
+            </section>
+            <section class="filters">
+                <input id="search" oninput="render()" placeholder="🔍 Cari nama atau lokasi..." type="text">
+                <select id="price" onchange="render()">
+                    <option value="all">
+                        Semua harga
+                    </option>
+                    <option value="400000">
+                        Di bawah Rp400.000
+                    </option>
+                    <option value="700000">
+                        Di bawah Rp700.000
+                    </option>
+                    <option value="1000000">
+                        Di bawah Rp1.000.000
+                    </option>
+                </select>
+            </section>
+            <section class="section compact">
+                <div class="grid" id="list">
+                </div>
+                <p class="empty hidden" id="empty">
+                    Penginapan tidak ditemukan.
+                </p>
+            </section>
+        </main>
+        <footer>
+            © StayNest 
+        </footer>
+        <script src="js/script.js">
+        </script>
+    </body>
+</html>
